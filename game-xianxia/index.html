@@ -740,6 +740,178 @@
         transform: scale(0.95);
       }
     }
+
+    /* 角色创建样式 */
+    .element-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .element-card {
+      padding: 12px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s;
+      text-align: center;
+    }
+
+    .element-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(0,212,255,0.3);
+    }
+
+    .element-card.selected {
+      border-color: #00d4ff;
+      box-shadow: 0 0 15px rgba(0,212,255,0.3);
+    }
+
+    .element-card .element-icon {
+      font-size: 1.2rem;
+      margin-bottom: 5px;
+    }
+
+    .element-card .element-name {
+      font-size: 0.9rem;
+      margin-bottom: 3px;
+    }
+
+    .element-card .element-grade {
+      font-size: 0.7rem;
+      color: #888;
+    }
+
+    .element-card .element-bonus {
+      font-size: 0.65rem;
+      color: #00ff88;
+      margin-top: 5px;
+    }
+
+    .element-metal { border-color: rgba(255, 215, 0, 0.3); }
+    .element-wood { border-color: rgba(144, 238, 144, 0.3); }
+    .element-water { border-color: rgba(0, 191, 255, 0.3); }
+    .element-fire { border-color: rgba(255, 69, 0, 0.3); }
+    .element-earth { border-color: rgba(210, 180, 140, 0.3); }
+    .element-thunder { border-color: rgba(147, 112, 219, 0.3); }
+    .element-ice { border-color: rgba(224, 255, 255, 0.3); }
+    .element-wind { border-color: rgba(255, 250, 205, 0.3); }
+    .element-light { border-color: rgba(255, 255, 224, 0.3); }
+    .element-darkness { border-color: rgba(128, 0, 128, 0.3); }
+
+    .element-card.selected.element-metal { border-color: #ffd700; box-shadow: 0 0 15px rgba(255, 215, 0, 0.4); }
+    .element-card.selected.element-wood { border-color: #90ee90; box-shadow: 0 0 15px rgba(144, 238, 144, 0.4); }
+    .element-card.selected.element-water { border-color: #00bfff; box-shadow: 0 0 15px rgba(0, 191, 255, 0.4); }
+    .element-card.selected.element-fire { border-color: #ff4500; box-shadow: 0 0 15px rgba(255, 69, 0, 0.4); }
+    .element-card.selected.element-earth { border-color: #d2b48c; box-shadow: 0 0 15px rgba(210, 180, 140, 0.4); }
+    .element-card.selected.element-thunder { border-color: #9370db; box-shadow: 0 0 15px rgba(147, 112, 219, 0.4); }
+    .element-card.selected.element-ice { border-color: #e0ffff; box-shadow: 0 0 15px rgba(224, 255, 255, 0.4); }
+    .element-card.selected.element-wind { border-color: #fffacd; box-shadow: 0 0 15px rgba(255, 250, 205, 0.4); }
+    .element-card.selected.element-light { border-color: #ffffe0; box-shadow: 0 0 15px rgba(255, 255, 224, 0.4); }
+    .element-card.selected.element-darkness { border-color: #4a0080; box-shadow: 0 0 15px rgba(128, 0, 128, 0.4); }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.9rem;
+      color: #aaa;
+      margin-bottom: 8px;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 10px 15px;
+      background: rgba(0,0,0,0.3);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      color: #fff;
+      font-size: 0.95rem;
+      font-family: inherit;
+      transition: all 0.3s;
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: rgba(0,212,255,0.5);
+      box-shadow: 0 0 15px rgba(0,212,255,0.1);
+    }
+
+    .option-group {
+      display: flex;
+      gap: 10px;
+    }
+
+    .option-btn {
+      flex: 1;
+      padding: 10px 15px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      color: #aaa;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-family: inherit;
+    }
+
+    .option-btn:hover {
+      background: rgba(0,212,255,0.1);
+      border-color: rgba(0,212,255,0.3);
+    }
+
+    .option-btn.selected {
+      background: linear-gradient(135deg, rgba(0,212,255,0.3), rgba(123,44,191,0.3));
+      border-color: #00d4ff;
+      color: #fff;
+    }
+
+    .character-preview {
+      background: linear-gradient(145deg, rgba(30,30,50,0.9), rgba(20,20,40,0.95));
+      border: 1px solid rgba(0,212,255,0.2);
+      border-radius: 12px;
+      padding: 15px;
+    }
+
+    .preview-avatar {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 10px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      border: 2px solid rgba(0,212,255,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+    }
+
+    .preview-name {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #00d4ff;
+      margin-bottom: 3px;
+    }
+
+    .preview-realm {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #888;
+    }
+
+    .preview-description {
+      margin-top: 10px;
+      padding: 10px;
+      background: rgba(0,0,0,0.3);
+      border-radius: 8px;
+      font-size: 0.8rem;
+      color: #aaa;
+      line-height: 1.5;
+    }
   </style>
 </head>
 <body>
@@ -764,12 +936,121 @@
     </div>
   </div>
 
+  <!-- 角色创建/查看弹窗 -->
+  <div class="modal-overlay" id="characterModal">
+    <div class="modal" style="max-width: 500px; max-height: 90vh; overflow-y: auto;">
+      <div class="modal-title">👤 角色信息</div>
+      
+      <!-- 角色显示区域 -->
+      <div id="characterDisplay">
+        <div class="character-preview" style="margin-bottom: 20px;">
+          <div class="preview-avatar" id="previewAvatar" style="width: 100px; height: 100px; font-size: 2.5rem;">🧑</div>
+          <div class="preview-name" id="characterName">未创建角色</div>
+          <div class="preview-realm" id="characterRealm">请创建角色</div>
+          <div class="preview-description" id="characterDesc">点击下方按钮创建你的修仙角色</div>
+        </div>
+      </div>
+      
+      <!-- 角色创建表单 -->
+      <div id="characterForm" style="display: none;">
+        <div class="form-group">
+          <label class="form-label">角色名称</label>
+          <input type="text" class="form-input" id="charName" placeholder="输入你的道号" maxlength="20">
+        </div>
+        
+        <div class="form-group">
+          <label class="form-label">选择灵根 🎯</label>
+          <div class="element-grid" id="elementGrid">
+            <div class="element-card element-metal" data-element="金属性">
+              <div class="element-icon">⚔️</div>
+              <div class="element-name">金属性</div>
+              <div class="element-grade">攻击型</div>
+              <div class="element-bonus">+20% 灵气获取</div>
+            </div>
+            <div class="element-card element-wood" data-element="木属性">
+              <div class="element-icon">🌿</div>
+              <div class="element-name">木属性</div>
+              <div class="element-grade">恢复型</div>
+              <div class="element-bonus">+15% 修炼效率</div>
+            </div>
+            <div class="element-card element-water" data-element="水属性">
+              <div class="element-icon">💧</div>
+              <div class="element-name">水属性</div>
+              <div class="element-grade">防御型</div>
+              <div class="element-bonus">+10% 灵气上限</div>
+            </div>
+            <div class="element-card element-fire" data-element="火属性">
+              <div class="element-icon">🔥</div>
+              <div class="element-name">火属性</div>
+              <div class="element-grade">攻击型</div>
+              <div class="element-bonus">+25% 暴击率</div>
+            </div>
+            <div class="element-card element-earth" data-element="土属性">
+              <div class="element-icon">🪨</div>
+              <div class="element-name">土属性</div>
+              <div class="element-grade">防御型</div>
+              <div class="element-bonus">+20% 灵气上限</div>
+            </div>
+            <div class="element-card element-thunder" data-element="雷属性">
+              <div class="element-icon">⚡</div>
+              <div class="element-name">雷属性</div>
+              <div class="element-grade">攻击型</div>
+              <div class="element-bonus">+30% 暴击率</div>
+            </div>
+            <div class="element-card element-ice" data-element="冰属性">
+              <div class="element-icon">❄️</div>
+              <div class="element-name">冰属性</div>
+              <div class="element-grade">控制型</div>
+              <div class="element-bonus">+15% 灵气获取</div>
+            </div>
+            <div class="element-card element-wind" data-element="风属性">
+              <div class="element-icon">🌪️</div>
+              <div class="element-name">风属性</div>
+              <div class="element-grade">敏捷型</div>
+              <div class="element-bonus">+20% 修炼效率</div>
+            </div>
+            <div class="element-card element-light" data-element="光属性">
+              <div class="element-icon">☀️</div>
+              <div class="element-name">光属性</div>
+              <div class="element-grade">辅助型</div>
+              <div class="element-bonus">+25% 修炼效率</div>
+            </div>
+            <div class="element-card element-darkness" data-element="暗属性">
+              <div class="element-icon">🌑</div>
+              <div class="element-name">暗属性</div>
+              <div class="element-grade">特殊型</div>
+              <div class="element-bonus">+30% 灵气获取</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label class="form-label">选择性别</label>
+          <div class="option-group">
+            <button class="option-btn gender-btn selected" data-gender="male">👨 男</button>
+            <button class="option-btn gender-btn" data-gender="female">👩 女</button>
+            <button class="option-btn gender-btn" data-gender="neutral">🧑 中性</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="modal-buttons">
+        <button class="modal-btn cancel" id="characterCancel">关闭</button>
+        <button class="modal-btn confirm" id="characterConfirm">创建角色</button>
+      </div>
+    </div>
+  </div>
+
   <div class="container">
     <h1 class="title">灵气采集</h1>
     <p class="subtitle">修仙世界 · 吐纳修炼</p>
 
     <!-- 快捷操作面板 -->
     <div class="quick-actions">
+      <button class="quick-btn" id="characterBtn">
+        <span class="quick-btn-icon">👤</span>
+        <span>角色</span>
+      </button>
       <button class="quick-btn" id="saveBtn">
         <span class="quick-btn-icon">💾</span>
         <span>保存进度</span>
@@ -900,7 +1181,9 @@
       levelUpCount: 0,
       maxSpiritRecord: 100,
       startTime: Date.now(),
-      pendingLevelUp: false
+      pendingLevelUp: false,
+      // 角色信息
+      character: null  // { name, element, gender, created: timestamp }
     };
 
     // 修炼阶段
@@ -941,7 +1224,20 @@
       levelUpCount: document.getElementById('levelUpCount'),
       maxSpiritRecord: document.getElementById('maxSpiritRecord'),
       statsPanel: document.querySelector('.stats-panel'),
-      logPanel: document.querySelector('.log-panel')
+      logPanel: document.querySelector('.log-panel'),
+      // 角色相关元素
+      characterBtn: document.getElementById('characterBtn'),
+      characterModal: document.getElementById('characterModal'),
+      characterCancel: document.getElementById('characterCancel'),
+      characterConfirm: document.getElementById('characterConfirm'),
+      characterDisplay: document.getElementById('characterDisplay'),
+      characterForm: document.getElementById('characterForm'),
+      charName: document.getElementById('charName'),
+      elementGrid: document.getElementById('elementGrid'),
+      previewAvatar: document.getElementById('previewAvatar'),
+      characterName: document.getElementById('characterName'),
+      characterRealm: document.getElementById('characterRealm'),
+      characterDesc: document.getElementById('characterDesc')
     };
 
     // 创建星空背景
@@ -1195,6 +1491,7 @@
         clickCount: gameState.clickCount,
         levelUpCount: gameState.levelUpCount,
         maxSpiritRecord: gameState.maxSpiritRecord,
+        character: gameState.character,
         saveTime: Date.now()
       };
       localStorage.setItem('xianxia_save', JSON.stringify(saveData));
@@ -1215,6 +1512,7 @@
         gameState.clickCount = data.clickCount || 0;
         gameState.levelUpCount = data.levelUpCount || 0;
         gameState.maxSpiritRecord = data.maxSpiritRecord || 100;
+        gameState.character = data.character || null;
         
         // 计算离线收益
         if (data.saveTime) {
@@ -1229,6 +1527,11 @@
         
         updateUI();
         addLog('📂 进度已读取');
+        
+        // 如果有角色，显示角色信息
+        if (gameState.character) {
+          addLog(`👤 角色：${gameState.character.name} (${gameState.character.element})`);
+        }
       } else {
         addLog('📂 暂无存档');
       }
@@ -1248,6 +1551,7 @@
         gameState.levelUpCount = 0;
         gameState.maxSpiritRecord = 100;
         gameState.logs = [];
+        gameState.character = null;
         
         updateUI();
         addLog('🔄 修炼已重置，重新开始修仙之旅');
@@ -1258,6 +1562,183 @@
     document.getElementById('saveBtn').addEventListener('click', saveGame);
     document.getElementById('loadBtn').addEventListener('click', loadGame);
     document.getElementById('resetBtn').addEventListener('click', resetGame);
+
+    // ========== 角色功能 ==========
+    // 灵根效果映射
+    const elementBonus = {
+      '金属性': { spiritRate: 1.2, efficiency: 1, maxSpirit: 1 },
+      '木属性': { spiritRate: 1, efficiency: 1.15, maxSpirit: 1 },
+      '水属性': { spiritRate: 1, efficiency: 1, maxSpirit: 1.1 },
+      '火属性': { spiritRate: 1, efficiency: 1, maxSpirit: 1, crit: 0.25 },
+      '土属性': { spiritRate: 1, efficiency: 1, maxSpirit: 1.2 },
+      '雷属性': { spiritRate: 1, efficiency: 1, maxSpirit: 1, crit: 0.3 },
+      '冰属性': { spiritRate: 1.15, efficiency: 1, maxSpirit: 1 },
+      '风属性': { spiritRate: 1, efficiency: 1.2, maxSpirit: 1 },
+      '光属性': { spiritRate: 1, efficiency: 1.25, maxSpirit: 1 },
+      '暗属性': { spiritRate: 1.3, efficiency: 1, maxSpirit: 1 }
+    };
+
+    // 性别图标
+    const genderIcons = {
+      'male': '👨',
+      'female': '👩',
+      'neutral': '🧑'
+    };
+
+    // 灵根图标
+    const elementIcons = {
+      '金属性': '⚔️',
+      '木属性': '🌿',
+      '水属性': '💧',
+      '火属性': '🔥',
+      '土属性': '🪨',
+      '雷属性': '⚡',
+      '冰属性': '❄️',
+      '风属性': '🌪️',
+      '光属性': '☀️',
+      '暗属性': '🌑'
+    };
+
+    // 灵根描述
+    const elementDescriptions = {
+      '金属性': '庚金之体，攻击最强，灵气获取效率提升20%',
+      '木属性': '乙木之体，恢复能力强，修炼效率提升15%',
+      '水属性': '壬水之体，防御兼备，灵气上限提升10%',
+      '火属性': '丙火之体，暴击伤害，暴击率提升25%',
+      '土属性': '戊土之体，厚德载物，灵气上限提升20%',
+      '雷属性': '天雷之体，毁灭之力，暴击率提升30%',
+      '冰属性': '寒冰之体，控制能力强，灵气获取提升15%',
+      '风属性': '巽风之体，速度如风，修炼效率提升20%',
+      '光属性': '太阳之体，正义之力，修炼效率提升25%',
+      '暗属性': '幽暗之体，神秘之力，灵气获取提升30%'
+    };
+
+    let selectedElement = null;
+    let selectedGender = 'male';
+
+    // 打开角色面板
+    elements.characterBtn.addEventListener('click', () => {
+      elements.characterModal.classList.add('active');
+      updateCharacterUI();
+    });
+
+    // 关闭角色面板
+    elements.characterCancel.addEventListener('click', () => {
+      elements.characterModal.classList.remove('active');
+      resetCharacterForm();
+    });
+
+    // 点击模态框外部关闭
+    elements.characterModal.addEventListener('click', (e) => {
+      if (e.target === elements.characterModal) {
+        elements.characterModal.classList.remove('active');
+        resetCharacterForm();
+      }
+    });
+
+    // 灵根选择
+    elements.elementGrid.addEventListener('click', (e) => {
+      const card = e.target.closest('.element-card');
+      if (card) {
+        document.querySelectorAll('.element-card').forEach(c => c.classList.remove('selected'));
+        card.classList.add('selected');
+        selectedElement = card.dataset.element;
+      }
+    });
+
+    // 性别选择
+    document.querySelectorAll('.gender-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.gender-btn').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+        selectedGender = btn.dataset.gender;
+      });
+    });
+
+    // 创建/更新角色
+    elements.characterConfirm.addEventListener('click', () => {
+      const name = elements.charName.value.trim();
+      
+      if (!name) {
+        alert('请输入角色名称！');
+        return;
+      }
+      
+      if (!selectedElement) {
+        alert('请选择灵根！');
+        return;
+      }
+
+      // 创建角色
+      gameState.character = {
+        name: name,
+        element: selectedElement,
+        gender: selectedGender,
+        created: Date.now()
+      };
+
+      // 应用灵根加成
+      const bonus = elementBonus[selectedElement];
+      if (bonus.efficiency > 1) {
+        gameState.efficiency = Math.floor(gameState.efficiency * bonus.efficiency);
+      }
+      if (bonus.maxSpirit > 1) {
+        gameState.maxSpirit = Math.floor(gameState.maxSpirit * bonus.maxSpirit);
+      }
+
+      // 保存
+      saveGame();
+      
+      // 关闭面板
+      elements.characterModal.classList.remove('active');
+      
+      // 显示创建成功
+      addLog(`🎉 角色创建成功！${name} (${selectedElement})`);
+      showAchievement(`创建角色：${name}！`);
+      
+      // 更新界面
+      updateUI();
+      resetCharacterForm();
+    });
+
+    // 更新角色UI
+    function updateCharacterUI() {
+      if (gameState.character) {
+        // 显示已有角色
+        elements.characterDisplay.style.display = 'block';
+        elements.characterForm.style.display = 'none';
+        elements.characterConfirm.style.display = 'none';
+        
+        const char = gameState.character;
+        elements.previewAvatar.textContent = genderIcons[char.gender] || '🧑';
+        elements.characterName.textContent = char.name;
+        
+        const stage = cultivationStages.find(s => s.level === gameState.level);
+        elements.characterRealm.textContent = `${stage ? stage.name : '筑基期'} · ${char.element}`;
+        elements.characterDesc.textContent = elementDescriptions[char.element] || '';
+        
+        // 修改按钮文字为"重新创建"
+        elements.characterConfirm.textContent = '重新创建';
+      } else {
+        // 显示创建表单
+        elements.characterDisplay.style.display = 'none';
+        elements.characterForm.style.display = 'block';
+        elements.characterConfirm.style.display = 'inline-block';
+        elements.characterConfirm.textContent = '创建角色';
+      }
+    }
+
+    // 重置角色表单
+    function resetCharacterForm() {
+      elements.charName.value = '';
+      selectedElement = null;
+      selectedGender = 'male';
+      document.querySelectorAll('.element-card').forEach(c => c.classList.remove('selected'));
+      document.querySelectorAll('.gender-btn').forEach(b => b.classList.remove('selected'));
+      document.querySelector('.gender-btn[data-gender="male"]').classList.add('selected');
+    }
+
+    // ========== 角色功能结束 ==========
 
     // 底部操作栏
     document.getElementById('toggleStats').addEventListener('click', () => {
